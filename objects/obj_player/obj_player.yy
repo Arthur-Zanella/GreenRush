@@ -9,10 +9,13 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Recipiente",
+    "path": "folders/Objects/Recipiente.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_object",
+    "path": "objects/obj_object/obj_object.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

@@ -29,7 +29,7 @@ menuCursorPrevious = -1;
 
 itemSelected = false;
 
-title = "RecycleHeroes";
+title = "Green Rush";
 
 //Cada função tem uma forma de ser executada e cada objeto filho pode ter uma função customizada feita pelo dev
 menuFunction[2] = function() { SlideTransition(TRANS_MODE.GOTO, Cenario); }

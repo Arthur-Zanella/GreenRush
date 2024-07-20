@@ -1,2 +1,2 @@
 event_inherited();
-speed = 1;
+normal_speed = 1;

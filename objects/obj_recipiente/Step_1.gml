@@ -1,6 +1,6 @@
-
+if(global.pause)exit;
 x = obj_player.x;
-y = obj_player.y-19;
+y = obj_player.y-32;
 
 
 

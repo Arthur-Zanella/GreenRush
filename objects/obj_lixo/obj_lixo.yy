@@ -12,7 +12,10 @@
     "name": "Resíduos",
     "path": "folders/Objects/Resíduos.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_object",
+    "path": "objects/obj_object/obj_object.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

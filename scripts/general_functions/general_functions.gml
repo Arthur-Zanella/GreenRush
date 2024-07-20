@@ -5,3 +5,7 @@ function scr_array_sum(arr) {
     }
     return total;
 }
+function scr_papermove(){
+	x = initial_x + oscillation_amplitude * sin(time);
+	time += oscillation_speed;
+}

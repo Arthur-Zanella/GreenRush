@@ -1,5 +1,9 @@
-
-if (time >= spawn_interval) {
+if(global.pause)exit;
+if(nosolo){
+	spawn_interval = base_interval / (1 + (instance_number(obj_lixo) / scale_factor));
+	global.lixocaido = instance_number(obj_lixo) - 5;
+}
+if (tempo >= spawn_interval) {
 	randomize();
 	var rand_tipo = irandom(total_weight_tipo - 1);
     var tipo_lixo;
@@ -16,11 +20,10 @@ if (time >= spawn_interval) {
 	        tipo_lixo = tipoResiduo.ORGANICO;
 	    }
 
-    var chanceQueda = irandom(100);
-	
-    if (chanceQueda >= 40) {
-        var sorteio = random_range(320, 760);
-
+    chanceQueda = irandom(500);
+	var current_chance = 10 + (global.timer * 0.1);
+    if (chanceQueda < current_chance) {
+        var sorteio = random_range(320, 600);
         switch (tipo_lixo) {
             case tipoResiduo.PAPEL:
                 instance_create_layer(sorteio, y, "Lixo", obj_papel);
@@ -38,8 +41,8 @@ if (time >= spawn_interval) {
                 instance_create_layer(sorteio, y, "Lixo", obj_organico);
                 break;
         }
-        time = 0; // Resetar o temporizador
+        tempo = 0; // Resetar o temporizador
     }
 } else {
-    time += 1; // Incrementar o temporizador
+    tempo += 1; // Incrementar o temporizador
 }

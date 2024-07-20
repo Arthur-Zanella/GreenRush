@@ -1,4 +1,4 @@
-event_inherited();
+
 //Controle do recipiente
 recipiente_input();
 
@@ -16,7 +16,7 @@ switch(state){
 		sprite_index = spr_plast;
 		if(place_meeting(x, y-1, obj_plastico)){
 			instance_destroy(instance_nearest(x, y, obj_plastico));
-			global.pontuacao += 2;
+			global.pontuacao += 2;		
 		}
 		break;
 		

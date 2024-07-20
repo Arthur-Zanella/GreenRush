@@ -54,6 +54,14 @@ function scr_ycollision(){
 	}
 }
 #endregion
-
+function scr_animacao(){
+	if(xmove == 0){
+		sprite_index = spr_idle;
+	}else if(xmove > 0){
+		sprite_index = spr_runr;
+	}else{
+		sprite_index =spr_runl;
+	}
+}
 
 	

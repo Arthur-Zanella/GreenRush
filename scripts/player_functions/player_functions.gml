@@ -55,12 +55,17 @@ function scr_ycollision(){
 }
 #endregion
 function scr_animacao(){
+	if(keyboard_check_pressed(ord("W"))){
+		sprite_index = spr_idlejump;
+		
+	}else{
 	if(xmove == 0){
 		sprite_index = spr_idle;
 	}else if(xmove > 0){
 		sprite_index = spr_runr;
 	}else{
 		sprite_index =spr_runl;
+	}
 	}
 }
 

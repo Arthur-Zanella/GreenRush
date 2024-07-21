@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Indicadores",
-    "path": "folders/Sprites/recipiente/Indicadores.yy",
+    "path": "folders/Sprites/Recipiente/Indicadores.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

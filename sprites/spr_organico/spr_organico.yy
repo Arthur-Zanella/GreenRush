@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Resíduos",
-    "path": "folders/Sprites/Resíduos.yy",
+    "name": "organico",
+    "path": "folders/Sprites/Resíduos/organico.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

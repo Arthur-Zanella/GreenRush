@@ -1,9 +1,8 @@
 if(global.pause)exit;
-if(nosolo){
-	spawn_interval = base_interval / (1 + (instance_number(obj_lixo) / scale_factor));
-	global.lixocaido = instance_number(obj_lixo) - 5;
-}
-if (tempo >= spawn_interval) {
+spawn_interval = base_interval / (1 + (global.num_lixo_chao / scale_factor)); //Intervalo de spawn do lixo
+	
+
+if (tempo >= spawn_interval) { 
 	randomize();
 	var rand_tipo = irandom(total_weight_tipo - 1);
     var tipo_lixo;
@@ -16,33 +15,51 @@ if (tempo >= spawn_interval) {
 	        tipo_lixo = tipoResiduo.VIDRO;
 	    } else if (rand_tipo < pesos_tipo[tipoResiduo.PAPEL] + pesos_tipo[tipoResiduo.PLASTICO] + pesos_tipo[tipoResiduo.VIDRO] + pesos_tipo[tipoResiduo.METAL]) {
 	        tipo_lixo = tipoResiduo.METAL;
-	    } else {
+	    } else if (rand_tipo < pesos_tipo[tipoResiduo.PAPEL] + pesos_tipo[tipoResiduo.PLASTICO] + pesos_tipo[tipoResiduo.VIDRO] + pesos_tipo[tipoResiduo.METAL] + pesos_tipo[tipoResiduo.ORGANICO]) {
 	        tipo_lixo = tipoResiduo.ORGANICO;
-	    }
+	    } else if (rand_tipo < pesos_tipo[tipoResiduo.PAPEL] + pesos_tipo[tipoResiduo.PLASTICO] + pesos_tipo[tipoResiduo.VIDRO] + pesos_tipo[tipoResiduo.METAL] + pesos_tipo[tipoResiduo.ORGANICO] + pesos_tipo[tipoResiduo.COMUM]) {
+			tipo_lixo = tipoResiduo.COMUM;
+		} else {
+			tipo_lixo = tipoResiduo.PILHA;
+		}
 
-    chanceQueda = irandom(500);
+    chance_queda = irandom(500);
 	var current_chance = 10 + (global.timer * 0.1);
-    if (chanceQueda < current_chance) {
+	if(current_chance >= 500)current_chance = 500;
+    if (chance_queda < current_chance) {
+		
         var sorteio = random_range(320, 600);
         switch (tipo_lixo) {
             case tipoResiduo.PAPEL:
-                instance_create_layer(sorteio, y, "Lixo", obj_papel);
+				var i = irandom(2);
+                instance_create_layer(sorteio, y, "Lixo", papel[i]);
                 break;
             case tipoResiduo.PLASTICO:
-                instance_create_layer(sorteio, y, "Lixo", obj_plastico);
+				var i = irandom(2);
+                instance_create_layer(sorteio, y, "Lixo", plastico[i]);
                 break;
             case tipoResiduo.VIDRO:
-                instance_create_layer(sorteio, y, "Lixo", obj_vidro);
+				var i = irandom(2);
+                instance_create_layer(sorteio, y, "Lixo", vidro[i]);
                 break;
             case tipoResiduo.METAL:
-                instance_create_layer(sorteio, y, "Lixo", obj_metal);
+				var i = irandom(2);
+                instance_create_layer(sorteio, y, "Lixo", metal[i]);
                 break;
             case tipoResiduo.ORGANICO:
-                instance_create_layer(sorteio, y, "Lixo", obj_organico);
+				var i = irandom(2);
+                instance_create_layer(sorteio, y, "Lixo", organico[i]);
+                break;
+            case tipoResiduo.COMUM:
+				var i = irandom(3);
+                instance_create_layer(sorteio, y, "Lixo", comum[i]);
+                break;
+            case tipoResiduo.PILHA:
+                instance_create_layer(sorteio, y, "Lixo", obj_battery);
                 break;
         }
         tempo = 0; // Resetar o temporizador
     }
 } else {
-    tempo += 1; // Incrementar o temporizador
+		tempo += 1; // Incrementar o temporizador
 }

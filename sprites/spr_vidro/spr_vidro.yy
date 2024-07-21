@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 6,
   "parent": {
-    "name": "Resíduos",
-    "path": "folders/Sprites/Resíduos.yy",
+    "name": "vidro",
+    "path": "folders/Sprites/Resíduos/vidro.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

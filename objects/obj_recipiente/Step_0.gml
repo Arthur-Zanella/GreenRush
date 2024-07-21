@@ -1,11 +1,15 @@
-
+if(global.pause)exit;
 //Controle do recipiente
 recipiente_input();
+if(place_meeting(x, y-1, obj_comum)){
+	instance_destroy(instance_nearest(x, y, obj_comum));
+	global.pontuacao -= 5;		
+}
 
 //Troca a cor do recipiente e muda seu estado
 switch(state){
 	case states.AZUL:
-		sprite_index = spr_pap;
+			sprite_index = spr_pap;
 		if(place_meeting(x, y-1, obj_papel)){
 			instance_destroy(instance_nearest(x, y, obj_papel));
 			global.pontuacao += 1;

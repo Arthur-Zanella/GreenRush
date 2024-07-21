@@ -23,10 +23,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f651e3f2-db3b-4c8b-a2e9-88b091549023","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 0,
+  "origin": 1,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Cenario",
+    "path": "folders/Sprites/Cenario.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -59,7 +59,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 0,
+    "xorigin": 16,
     "yorigin": 0,
   },
   "swatchColours": null,

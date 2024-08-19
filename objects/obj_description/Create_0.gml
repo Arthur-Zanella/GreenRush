@@ -1,0 +1,29 @@
+escala = 3;
+boxl = sprite_get_width(spr_UIpaperdescription) * escala;
+boxa = sprite_get_height(spr_UIpaperdescription) * escala;
+guil = display_get_gui_width();
+guia = display_get_gui_height();
+xb =  guil/2 - boxl/2;
+yb =  guia/2 - boxa/2;
+
+
+descript[0] = "O jornal é reciclável e uma importante fonte de papel reaproveitado, contribuindo para a preservação de árvores e a economia de água e energia. Ele pode ser reciclado várias vezes, ajudando a reduzir a quantidade de resíduos em aterros. Deve ser descartado na lixeira azul (papel/papelão).";
+descript[1] = "As caixas de papelão são recicláveis e amplamente reutilizadas para novas embalagens, economizando recursos naturais. A reciclagem do papelão ajuda a reduzir o desmatamento e o consumo de energia. Deve ser descartada na lixeira azul (papel/papelão)."
+descript[2] = "Os sacos de papel são recicláveis e uma alternativa mais ecológica que os plásticos, decompondo-se rapidamente no ambiente. A reciclagem dos sacos de papel ajuda a preservar os recursos naturais. Deve ser descartado na lixeira azul (papel/papelão)."
+descript[3] = "As garrafas plásticas são recicláveis, mas representam uma grande preocupação ambiental devido à sua lenta decomposição. A reciclagem de garrafas plásticas economiza petróleo e reduz a poluição. Tempo de decomposição: até 450 anos. Deve ser descartada na lixeira vermelha (plástico)."
+descript[4] = "Os jarros de leite plásticos são recicláveis e podem ser transformados em novos produtos, ajudando a reduzir a poluição plástica. Tempo de decomposição: até 450 anos. Deve ser descartado na lixeira vermelha (plástico)."
+descript[5] = "Recicláveis, os jarros plásticos ajudam a diminuir a poluição nos oceanos e podem ser reutilizados para produzir novos itens. Tempo de decomposição: até 450 anos. Deve ser descartado na lixeira vermelha (plástico)."
+descript[9] = "As latas de refrigerante são recicláveis e infinitamente reutilizáveis, economizando 95% da energia necessária para produzir alumínio novo. Deve ser descartada na lixeira amarela (metal)."
+descript[11] = "Reciclável, a lata comum cilíndrica contribui para a economia de recursos naturais, como o minério de ferro e o carvão. Deve ser descartada na lixeira amarela (metal)."
+descript[10] = "As latas longas cilíndricas são recicláveis e comuns em produtos alimentícios, mantendo o ciclo de vida dos materiais em movimento. Deve ser descartada na lixeira amarela (metal)."
+descript[6] = "Os potes de vidro genéricos são recicláveis e contribuem para a diminuição de resíduos nos aterros. Tempo de decomposição: até 1 milhão de anos. Devem ser descartados na lixeira verde (vidro)."
+descript[7] = "As garrafas de refrigerante de vidro são recicláveis e ajudam a reduzir a quantidade de lixo nos aterros sanitários. Tempo de decomposição: até 1 milhão de anos. Devem ser descartadas na lixeira verde (vidro)."
+descript[8] = "Recicláveis e infinitamente reutilizáveis, as garrafas de cerveja de vidro economizam recursos naturais e energia. Tempo de decomposição: até 1 milhão de anos. Devem ser descartadas na lixeira verde (vidro)."
+descript[12] = "As cascas de banana são orgânicas e excelentes para compostagem, enriquecendo o solo com nutrientes essenciais. Tempo de decomposição: cerca de 3 semanas. Deve ser descartada na lixeira marrom (resíduos orgânicos)."
+descript[13] = "As cascas de ovo são orgânicas e uma excelente fonte de cálcio para o solo quando compostadas. Tempo de decomposição: cerca de 2 meses. Deve ser descartada na lixeira marrom (resíduos orgânicos)."
+descript[14] = "Orgânica, a maçã podre é perfeita para compostagem, contribuindo para a melhoria da qualidade do solo. Tempo de decomposição: cerca de 2 semanas. Deve ser descartada na lixeira marrom (resíduos orgânicos)."
+//descript[15] = "As canecas de cerâmica não são recicláveis pelo processo comum e devem ser descartadas no lixo comum, pois sua decomposição no ambiente é praticamente indefinida."
+//descript[16] = "Caixas de pizza engorduradas não são recicláveis porque a gordura compromete o processo de reciclagem do papel. Devem ser descartadas no lixo comum."
+//descript[17] = "As latas de spray pressurizadas não são recicláveis pelo processo comum e devem ser descartadas em pontos de coleta específicos devido ao risco de explosão."
+//descript[18] = "Os copinhos de isopor não são recicláveis pelo processo comum e devem ser descartados no lixo comum devido à dificuldade de reciclagem e à facilidade de contaminação do material pelo líquido que é armazenado nele. Tempo de decomposição: até 400 anos."
+descript[15] = "As pilhas usadas não são recicláveis pelo processo comum e devem ser descartadas em pontos de coleta específicos para resíduos eletrônicos, pois contêm metais pesados que podem contaminar o solo e a água. Tempo de decomposição: indefinido."

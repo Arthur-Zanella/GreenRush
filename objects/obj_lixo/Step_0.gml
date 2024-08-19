@@ -17,8 +17,9 @@ if(place_meeting(x, y+1, obj_wall)){
 	if place_meeting(x+sign(obj_player.xmove), y, obj_player){//Interação do player com o lixo acumulado no chão
 		direction = point_direction(x, y, obj_player.x, y);
 		move_bounce_all(true);
-		speed = 1;
-		obj_player.spd = 3;
+		speed = 1.5;
+
+		
 	}else{
 		move_bounce_all(false);
 		speed = 0;
@@ -29,7 +30,7 @@ if(place_meeting(x, y+1, obj_wall)){
 	}
 }else{
 	direction = main_direction;
-	obj_player.spd = 5;
+	
 	 
     if (is_counted) {// Se o lixo não está mais no chão, atualizar a contagem
         global.num_lixo_chao -= 1;

@@ -4,8 +4,7 @@ enum tipoResiduo{
 	VIDRO,
 	METAL,
 	ORGANICO,
-	COMUM,
-	PILHA
+	//PILHA
 }
 #region Atributos
 tempo = 0;
@@ -13,7 +12,7 @@ base_interval = 100;
 scale_factor = 60;
 spawn_interval = base_interval;
 chance_queda = 0;
-pesos_tipo = [35, 25, 15, 5, 9, 8, 3]; //Peso de chance de spaw para cada resíduo
+pesos_tipo = [40, 25, 20, 5, 10]; //Peso de chance de spaw para cada resíduo
 total_weight_tipo = scr_array_sum(pesos_tipo); //Soma dos pesos(sempre 100)
 #endregion
 #region Objetos

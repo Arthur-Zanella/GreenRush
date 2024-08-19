@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_banana",
-    "path": "sprites/spr_banana/spr_banana.yy",
+    "name": "spr_egg",
+    "path": "sprites/spr_egg/spr_egg.yy",
   },
   "spriteMaskId": null,
   "visible": true,
